@@ -9,10 +9,10 @@ description = "Comprehensive Variant Analysis & Annotation Suite"
 readme = "README.md"
 license = {text = "MIT"}
 authors = [
-    {name = "Ata Umut ÖZSOY", email = "ataozsooy@gmail.com"}
+    {name = "Ata Umut ÖZSOY", email = "ataumut7@gmail.com"}
 ]
 maintainers = [
-    {name = "Ata Umut ÖZSOY", email = "ataozsooy@gmail.com"}
+    {name = "Ata Umut ÖZSOY", email = "ataumut7@gmail.com"}
 ]
 keywords = ["bioinformatics", "genomics", "variant-annotation", "clinical-genomics"]
 classifiers = [
@@ -47,10 +47,10 @@ dependencies = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/ataozsooy/varannote"
-Repository = "https://github.com/ataozsooy/varannote"
+Homepage = "https://github.com/AtaUmutOZSOY/VarAnnote"
+Repository = "https://github.com/AtaUmutOZSOY/VarAnnote"
 Documentation = "https://varannote.readthedocs.io/"
-"Bug Tracker" = "https://github.com/ataozsooy/varannote/issues"
+"Bug Tracker" = "https://github.com/AtaUmutOZSOY/VarAnnote/issues"
 
 [project.scripts]
 varannote = "varannote.cli:main"
