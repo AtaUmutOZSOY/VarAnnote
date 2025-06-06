@@ -55,19 +55,19 @@ def annotate(ctx, input_file, output, format, databases, genome, real_db, parall
     if not output:
         output = Path(input_file).stem + f"_annotated.{format}"
     
-    click.echo(f"🧬 Annotating variants from {input_file}")
-    click.echo(f"📊 Using genome: {genome}")
-    click.echo(f"🗄️  Databases: {', '.join(databases) if databases else 'all available'}")
+    click.echo(f"[*] Annotating variants from {input_file}")
+    click.echo(f"[*] Using genome: {genome}")
+    click.echo(f"[*] Databases: {', '.join(databases) if databases else 'all available'}")
     
     if real_db:
-        click.echo("🔗 Using REAL databases (ClinVar, gnomAD, dbSNP, COSMIC, OMIM, PharmGKB, ClinGen, HGMD, Ensembl)")
+        click.echo("[*] Using REAL databases (ClinVar, gnomAD, dbSNP, COSMIC, OMIM, PharmGKB, ClinGen, HGMD, Ensembl)")
         if parallel:
-            click.echo(f"⚡ Parallel processing enabled ({max_workers} workers)")
+            click.echo(f"[*] Parallel processing enabled ({max_workers} workers)")
     else:
-        click.echo("🎭 Using mock databases (for testing)")
+        click.echo("[*] Using mock databases (for testing)")
     
     if confidence_threshold > 0:
-        click.echo(f"🎯 Confidence threshold: {confidence_threshold}")
+        click.echo(f"[*] Confidence threshold: {confidence_threshold}")
     
     try:
         annotator = VariantAnnotatorTool(
@@ -81,17 +81,17 @@ def annotate(ctx, input_file, output, format, databases, genome, real_db, parall
         
         result = annotator.annotate_file(input_file, output, format)
         
-        click.echo(f"✅ Annotation complete: {result['variants_processed']} variants processed")
-        click.echo(f"📁 Output saved to: {output}")
+        click.echo(f"[+] Annotation complete: {result['variants_processed']} variants processed")
+        click.echo(f"[+] Output saved to: {output}")
         
         # Show confidence statistics if using real databases
         if real_db and 'confidence_stats' in result:
             stats = result['confidence_stats']
-            click.echo(f"📈 Confidence scores: avg={stats['average']:.3f}, "
+            click.echo(f"[*] Confidence scores: avg={stats['average']:.3f}, "
                       f"high_confidence={stats['high_confidence_count']}")
         
     except Exception as e:
-        click.echo(f"❌ Error: {str(e)}", err=True)
+        click.echo(f"[-] Error: {str(e)}", err=True)
         sys.exit(1)
 
 @main.command()
