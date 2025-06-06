@@ -19,7 +19,7 @@ def read_requirements():
 
 setup(
     name="varannote",
-    version="0.2.0",
+    version="1.0.0",
     author="Ata Umut ÖZSOY",
     author_email="ataumut7@gmail.com",
     description="Comprehensive Variant Analysis & Annotation Suite",
@@ -28,7 +28,7 @@ setup(
     url="https://github.com/AtaUmutOZSOY/VarAnnote",
     packages=find_packages(),
     classifiers=[
-        "Development Status :: 4 - Beta",
+        "Development Status :: 5 - Production/Stable",
         "Intended Audience :: Science/Research",
         "Topic :: Scientific/Engineering :: Bio-Informatics",
         "License :: OSI Approved :: MIT License",
