@@ -39,7 +39,15 @@ language = 'en'
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
+# ReadTheDocs theme
 html_theme = 'sphinx_rtd_theme'
+
+# Force ReadTheDocs to use the theme
+import os
+on_rtd = os.environ.get('READTHEDOCS', None) == 'True'
+if on_rtd:
+    html_theme = 'sphinx_rtd_theme'
+
 html_static_path = ['_static']
 
 # Theme options

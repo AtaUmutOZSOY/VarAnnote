@@ -30,7 +30,7 @@ Default configuration file: ``config.yaml``
      include_metadata: true
 
 Environment Variables
---------------------
+---------------------
 
 Override configuration with environment variables:
 
