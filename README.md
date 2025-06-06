@@ -189,10 +189,28 @@ pytest --cov=varannote tests/
 
 If you use VarAnnote in your research, please cite:
 
+### APA Format:
 ```
-Özsoy, A.U. (2024). VarAnnote: Comprehensive Variant Analysis & Annotation Suite. 
-GitHub repository: https://github.com/yourusername/varannote
+Özsoy, A. U. (2025). VarAnnote: Comprehensive Variant Analysis & Annotation Suite (Version 1.0.0) [Computer software]. https://github.com/AtaUmutOZSOY/VarAnnote
 ```
+
+### BibTeX:
+```bibtex
+@software{ozsoy2025varannote,
+  author = {Özsoy, Ata Umut},
+  title = {VarAnnote: Comprehensive Variant Analysis \& Annotation Suite},
+  url = {https://github.com/AtaUmutOZSOY/VarAnnote},
+  version = {1.0.0},
+  year = {2025}
+}
+```
+
+### IEEE Format:
+```
+A. U. Özsoy, "VarAnnote: Comprehensive Variant Analysis & Annotation Suite," Version 1.0.0, 2025. [Online]. Available: https://github.com/AtaUmutOZSOY/VarAnnote
+```
+
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.XXXXXX.svg)](https://doi.org/10.5281/zenodo.XXXXXX)
 
 ## License
 
@@ -201,8 +219,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## Contact
 
 - **Author**: Ata Umut ÖZSOY
-- **Email**: your.email@example.com
-- **GitHub**: https://github.com/yourusername/varannote
+- **Email**: ataumut7@gmail.com
+- **GitHub**: https://github.com/AtaUmutOZSOY/VarAnnote
 
 ## Acknowledgments
 

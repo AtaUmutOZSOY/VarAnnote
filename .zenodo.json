@@ -1,0 +1,45 @@
+{
+    "title": "VarAnnote: Comprehensive Variant Analysis & Annotation Suite",
+    "description": "A production-ready Python toolkit for genomic variant annotation and clinical interpretation with advanced filtering, configuration management, and multi-database integration.",
+    "creators": [
+        {
+            "name": "Özsoy, Ata Umut",
+            "affiliation": "Bioinformatics Researcher",
+            "orcid": "0000-0000-0000-0000"
+        }
+    ],
+    "keywords": [
+        "bioinformatics",
+        "genomics",
+        "variant annotation",
+        "clinical genomics",
+        "precision medicine",
+        "computational biology",
+        "python",
+        "open source"
+    ],
+    "license": "MIT",
+    "upload_type": "software",
+    "access_right": "open",
+    "language": "eng",
+    "related_identifiers": [
+        {
+            "identifier": "https://github.com/AtaUmutOZSOY/VarAnnote",
+            "relation": "isSupplementTo",
+            "scheme": "url"
+        },
+        {
+            "identifier": "https://pypi.org/project/varannote/",
+            "relation": "isSupplementTo", 
+            "scheme": "url"
+        }
+    ],
+    "communities": [
+        {
+            "identifier": "bioinformatics"
+        },
+        {
+            "identifier": "genomics"
+        }
+    ]
+} 
