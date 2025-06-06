@@ -273,15 +273,15 @@ class TestRealAnnotationDatabase:
         db = RealAnnotationDatabase(cache_dir=self.temp_dir)
         
         # Check that all database instances are created
-        assert hasattr(db, 'clinvar')
-        assert hasattr(db, 'gnomad')
-        assert hasattr(db, 'dbsnp')
-        assert hasattr(db, 'cosmic')
-        assert hasattr(db, 'omim')
-        assert hasattr(db, 'pharmgkb')
-        assert hasattr(db, 'clingen')
-        assert hasattr(db, 'hgmd')
-        assert hasattr(db, 'ensembl')
+        assert hasattr(db, 'clinvar_db')
+        assert hasattr(db, 'gnomad_db')
+        assert hasattr(db, 'dbsnp_db')
+        assert hasattr(db, 'cosmic_db')
+        assert hasattr(db, 'omim_db')
+        assert hasattr(db, 'pharmgkb_db')
+        assert hasattr(db, 'clingen_db')
+        assert hasattr(db, 'hgmd_db')
+        assert hasattr(db, 'ensembl_db')
     
     @patch('varannote.utils.real_annotation_db.ClinVarDatabase')
     def test_get_annotations_single_database(self, mock_clinvar):
@@ -294,7 +294,7 @@ class TestRealAnnotationDatabase:
         mock_clinvar.return_value = mock_instance
         
         db = RealAnnotationDatabase(cache_dir=self.temp_dir)
-        db.clinvar = mock_instance
+        db.clinvar_db = mock_instance
         
         result = db.get_annotations(self.sample_variant, "clinvar")
         
@@ -319,8 +319,8 @@ class TestRealAnnotationDatabase:
         mock_gnomad.return_value = mock_gnomad_instance
         
         db = RealAnnotationDatabase(cache_dir=self.temp_dir)
-        db.clinvar = mock_clinvar_instance
-        db.gnomad = mock_gnomad_instance
+        db.clinvar_db = mock_clinvar_instance
+        db.gnomad_db = mock_gnomad_instance
         
         result = db.get_annotations(self.sample_variant, "all")
         
@@ -345,7 +345,7 @@ class TestRealAnnotationDatabase:
         """Test getting database info"""
         db = RealAnnotationDatabase(cache_dir=self.temp_dir)
         
-        with patch.object(db.clinvar, 'get_database_info') as mock_info:
+        with patch.object(db.clinvar_db, 'get_database_info') as mock_info:
             mock_info.return_value = {
                 "name": "ClinVar",
                 "description": "Clinical significance database"
@@ -360,7 +360,7 @@ class TestRealAnnotationDatabase:
         
         # Mock all database info methods
         for db_name in db.get_available_databases():
-            db_instance = getattr(db, db_name)
+            db_instance = getattr(db, f"{db_name}_db")
             with patch.object(db_instance, 'get_database_info') as mock_info:
                 mock_info.return_value = {"name": db_name.upper()}
         
@@ -377,13 +377,12 @@ class TestRealAnnotationDatabase:
             "clinvar_significance": "Pathogenic",
             "gnomad_af": 0.001,
             "dbsnp_id": "rs123456",
-            "ensembl_consequence": "stop_gained",
             "gene": "BRCA1"
         }
         
         score = db._calculate_confidence_score(high_conf_annotations)
         assert 0.0 <= score <= 1.0
-        assert score >= 0.4  # Should be reasonably high confidence
+        assert score > 0.5  # Should be high confidence
         
         # Test with low-confidence annotations
         low_conf_annotations = {
@@ -451,8 +450,8 @@ class TestRealAnnotationDatabase:
         # Test cache stats
         stats = db.get_cache_stats()
         assert isinstance(stats, dict)
-        assert "cache_enabled" in stats
-        assert "databases" in stats
+        assert "total_files" in stats
+        assert "total_size_mb" in stats
         
         # Test cache clearing
         cleared_count = db.clear_cache()
@@ -465,7 +464,7 @@ class TestRealAnnotationDatabase:
         
         # Mock all database test methods
         for db_name in ["clinvar", "gnomad"]:  # Test subset for speed
-            db_instance = getattr(db, db_name)
+            db_instance = getattr(db, f"{db_name}_db")
             with patch.object(db_instance, 'get_variant_annotation') as mock_test:
                 mock_test.return_value = {"test": "success"}
         
@@ -476,7 +475,7 @@ class TestRealAnnotationDatabase:
         """Test gene symbol retrieval"""
         db = RealAnnotationDatabase(cache_dir=self.temp_dir)
         
-        with patch.object(db.ensembl, 'get_variant_annotation') as mock_ensembl:
+        with patch.object(db.ensembl_db, 'get_variant_annotation') as mock_ensembl:
             mock_ensembl.return_value = {"gene": "BRCA1"}
             
             gene = db._get_gene_symbol("17", 43044295)
@@ -486,7 +485,7 @@ class TestRealAnnotationDatabase:
         """Test error handling during annotation"""
         db = RealAnnotationDatabase(cache_dir=self.temp_dir)
         
-        with patch.object(db.clinvar, 'get_variant_annotation') as mock_clinvar:
+        with patch.object(db.clinvar_db, 'get_variant_annotation') as mock_clinvar:
             mock_clinvar.side_effect = Exception("API Error")
             
             # Should handle errors gracefully
@@ -514,8 +513,8 @@ class TestRealAnnotationDatabaseIntegration:
             }
             
             # Mock database responses
-            with patch.object(db.clinvar, 'get_variant_annotation') as mock_clinvar:
-                with patch.object(db.gnomad, 'get_variant_annotation') as mock_gnomad:
+            with patch.object(db.clinvar_db, 'get_variant_annotation') as mock_clinvar:
+                with patch.object(db.gnomad_db, 'get_variant_annotation') as mock_gnomad:
                     mock_clinvar.return_value = {"clinvar_significance": "Pathogenic"}
                     mock_gnomad.return_value = {"gnomad_af": 0.001}
                     
