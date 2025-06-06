@@ -380,8 +380,8 @@ class TestAnnotationPerformance:
         # Avoid division by zero for very fast operations
         if processing_time > 0:
             variants_per_second = len(self.large_variant_set) / processing_time
-            # Should process at least 10 variants per second
-            assert variants_per_second >= 10
+        # Should process at least 10 variants per second
+        assert variants_per_second >= 10
         else:
             # If processing is instantaneous, that's also good
             assert processing_time >= 0
