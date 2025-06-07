@@ -2,13 +2,12 @@ cff-version: 1.2.0
 message: "If you use this software, please cite it as below."
 type: software
 title: "VarAnnote: Comprehensive Variant Analysis & Annotation Suite"
-  version: 1.0.0
-  date-released: 2025-06-06
-  url: "https://github.com/AtaUmutOZSOY/VarAnnote"
-  doi: "10.5072/zenodo.267308"
+version: 1.0.0
+date-released: 2025-06-06
+url: "https://github.com/AtaUmutOZSOY/VarAnnote"
 repository-code: "https://github.com/AtaUmutOZSOY/VarAnnote"
-doi: "10.5072/zenodo.267308"
 repository-artifact: "https://pypi.org/project/varannote/"
+doi: "10.5281/zenodo.15615370"
 abstract: "A production-ready Python toolkit for genomic variant annotation and clinical interpretation with advanced filtering, configuration management, and integration with multiple genomic databases including ClinVar, gnomAD, dbSNP, and COSMIC."
 authors:
   - family-names: "Özsoy"
@@ -32,8 +31,9 @@ preferred-citation:
     - family-names: "Özsoy"
       given-names: "Ata Umut"
       email: "ataumut7@gmail.com"
-      affiliation: "Bioinformatics Researcher"
-      orcid: "https://orcid.org/0000-0000-0000-0000"
+      affiliation: "independent Bioinformatics Researcher"
+      orcid: "https://orcid.org/0000-0002-6182-5124"
   version: 1.0.0
   date-released: 2025-06-06
-  url: "https://github.com/AtaUmutOZSOY/VarAnnote" 
+  url: "https://github.com/AtaUmutOZSOY/VarAnnote"
+  doi: "10.5281/zenodo.15615370" 

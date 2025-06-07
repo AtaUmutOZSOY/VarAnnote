@@ -1,6 +1,6 @@
 # VarAnnote - Comprehensive Variant Analysis & Annotation Suite
 
-[![DOI](https://sandbox.zenodo.org/badge/996872177.svg)](https://handle.stage.datacite.org/10.5072/zenodo.267308)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.15615370.svg)](https://doi.org/10.5281/zenodo.15615370)
 
 🧬 A powerful toolkit for genomic variant annotation and clinical interpretation.
 
@@ -193,7 +193,7 @@ If you use VarAnnote in your research, please cite:
 
 ### APA Format:
 ```
-Özsoy, A. U. (2025). VarAnnote: Comprehensive Variant Analysis & Annotation Suite (Version 1.0.0) [Computer software]. https://doi.org/10.5072/zenodo.267308
+Özsoy, A. U. (2025). VarAnnote: Comprehensive Variant Analysis & Annotation Suite (Version 1.0.0) [Computer software]. https://doi.org/10.5281/zenodo.15615370
 ```
 
 ### BibTeX:
@@ -202,7 +202,7 @@ If you use VarAnnote in your research, please cite:
   author = {Özsoy, Ata Umut},
   title = {VarAnnote: Comprehensive Variant Analysis \& Annotation Suite},
   url = {https://github.com/AtaUmutOZSOY/VarAnnote},
-  doi = {10.5072/zenodo.267308},
+  doi = {10.5281/zenodo.15615370},
   version = {1.0.0},
   year = {2025}
 }
@@ -210,7 +210,7 @@ If you use VarAnnote in your research, please cite:
 
 ### IEEE Format:
 ```
-A. U. Özsoy, "VarAnnote: Comprehensive Variant Analysis & Annotation Suite," Version 1.0.0, 2025, doi: 10.5072/zenodo.267308. [Online]. Available: https://github.com/AtaUmutOZSOY/VarAnnote
+A. U. Özsoy, "VarAnnote: Comprehensive Variant Analysis & Annotation Suite," Version 1.0.0, 2025, doi: 10.5281/zenodo.15615370. [Online]. Available: https://github.com/AtaUmutOZSOY/VarAnnote
 ```
 
 ## License
