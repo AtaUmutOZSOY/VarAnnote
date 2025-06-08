@@ -19,7 +19,7 @@ def read_requirements():
 
 setup(
     name="varannote",
-    version="1.0.0",
+    version="1.0.6",
     author="Ata Umut ÖZSOY",
     author_email="ataumut7@gmail.com",
     description="Comprehensive Variant Analysis & Annotation Suite",
@@ -41,17 +41,7 @@ setup(
     ],
     python_requires=">=3.8",
     install_requires=read_requirements(),
-    entry_points={
-        "console_scripts": [
-            "varannote=varannote.cli:main",
-            "variant-annotator=varannote.tools.annotator:main",
-            "pathogenicity-predictor=varannote.tools.pathogenicity:main",
-            "pharmacogenomics-analyzer=varannote.tools.pharmacogenomics:main",
-            "population-freq-calculator=varannote.tools.population_freq:main",
-            "compound-het-detector=varannote.tools.compound_het:main",
-            "segregation-analyzer=varannote.tools.segregation:main",
-        ],
-    },
+
     keywords="bioinformatics genomics variant-annotation clinical-genomics",
     project_urls={
         "Bug Reports": "https://github.com/AtaUmutOZSOY/VarAnnote/issues",

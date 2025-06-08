@@ -29,6 +29,49 @@ pip install -e .
 pip install varannote
 ```
 
+## Installation
+
+### Option 1: Install from PyPI (Recommended)
+
+```bash
+pip install varannote
+```
+
+### Option 2: Install from Source
+
+```bash
+git clone https://github.com/AtaUmutOZSOY/VarAnnote.git
+cd VarAnnote
+pip install -e .
+```
+
+### Windows PATH Configuration
+
+VarAnnote automatically configures PATH on Windows during installation. If you encounter any issues:
+
+1. **Restart your terminal** after installation - this is usually enough
+2. **Alternative: Use python -m** (always works):
+   ```bash
+   python -m varannote --help
+   python -m varannote annotate input.vcf --output output.vcf
+   ```
+3. **Manual setup** (if needed):
+   ```bash
+   python -m varannote setup-path
+   ```
+
+### Verify Installation
+
+```bash
+# Test installation
+varannote --version
+# or
+python -m varannote --version
+
+# Test with help
+varannote --help
+```
+
 ## Quick Start
 
 ### Basic Variant Annotation

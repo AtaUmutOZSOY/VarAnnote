@@ -4,10 +4,10 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "varannote"
-version = "1.0.0"
+version = "1.0.6"
 description = "Comprehensive Variant Analysis & Annotation Suite"
 readme = "README.md"
-license = {text = "MIT"}
+license = "MIT"
 authors = [
     {name = "Ata Umut ÖZSOY", email = "ataumut7@gmail.com"}
 ]
@@ -52,7 +52,7 @@ Repository = "https://github.com/AtaUmutOZSOY/VarAnnote"
 Documentation = "https://varannote.readthedocs.io/"
 "Bug Tracker" = "https://github.com/AtaUmutOZSOY/VarAnnote/issues"
 
-[project.scripts]
+[project.entry-points."console_scripts"]
 varannote = "varannote.cli:main"
 variant-annotator = "varannote.tools.annotator:main"
 pathogenicity-predictor = "varannote.tools.pathogenicity:main"
