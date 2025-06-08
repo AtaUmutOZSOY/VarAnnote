@@ -3,7 +3,7 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-VarAnnote v1.0.6 Documentation
+VarAnnote v1.0.7 Documentation
 ===============================
 
 **VarAnnote** is a comprehensive variant analysis and annotation suite designed for genomic research and clinical applications. This production-ready tool provides advanced filtering, configuration management, and integration with multiple genomic databases.

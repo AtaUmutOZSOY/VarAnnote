@@ -1,6 +1,15 @@
 Changelog
 =========
 
+Version 1.0.7 (2025-01-06)
+---------------------------
+
+**Final Release**
+~~~~~~~~~~~~~~~~~
+* Final stable release with all features complete
+* All documentation updated to v1.0.7
+* PyPI deployment completed successfully
+
 Version 1.0.6 (2025-01-06)
 ---------------------------
 

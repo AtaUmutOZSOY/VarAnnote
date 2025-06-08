@@ -8,7 +8,7 @@ Author: Ata Umut ÖZSOY
 License: MIT
 """
 
-__version__ = "1.0.6"
+__version__ = "1.0.7"
 __author__ = "Ata Umut ÖZSOY"
 __email__ = "ataumut7@gmail.com"
 

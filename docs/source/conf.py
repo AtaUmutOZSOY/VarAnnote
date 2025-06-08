@@ -13,8 +13,8 @@ sys.path.insert(0, os.path.abspath('../../'))
 project = 'VarAnnote'
 copyright = '2025, Ata Umut ÖZSOY'
 author = 'Ata Umut ÖZSOY'
-release = '1.0.6'
-version = '1.0.6'
+release = '1.0.7'
+version = '1.0.7'
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
