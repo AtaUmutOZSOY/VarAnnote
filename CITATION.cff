@@ -31,8 +31,8 @@ preferred-citation:
     - family-names: "Özsoy"
       given-names: "Ata Umut"
       email: "ataumut7@gmail.com"
-      affiliation: "Bioinformatics Researcher"
-      orcid: "https://orcid.org/0000-0000-0000-0000"
+      affiliation: "independent Bioinformatics Researcher"
+      orcid: "https://orcid.org/0000-0002-6182-5124"
   version: 1.0.7
   date-released: 2025-06-08
   url: "https://github.com/AtaUmutOZSOY/VarAnnote" 
