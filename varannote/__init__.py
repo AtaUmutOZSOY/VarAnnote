@@ -8,9 +8,9 @@ Author: Ata Umut ÖZSOY
 License: MIT
 """
 
-__version__ = "0.1.0"
+__version__ = "1.0.0"
 __author__ = "Ata Umut ÖZSOY"
-__email__ = "your.email@example.com"
+__email__ = "ataumut7@gmail.com"
 
 # Core modules
 from .core import VariantAnnotator, PathogenicityPredictor
