@@ -1,6 +1,14 @@
 Changelog
 =========
 
+Version 1.0.8 (2025-01-06)
+--------------------------
+
+**Bug Fixes**
+* Fixed invalid ORCID identifier in .zenodo.json for Zenodo integration
+* Updated ORCID from placeholder (0000-0000-0000-0000) to valid ID (0000-0002-6182-5124)
+* Resolved GitHub release failure with Zenodo DOI generation
+
 Version 1.0.7 (2025-01-06)
 ---------------------------
 

@@ -19,7 +19,7 @@ def read_requirements():
 
 setup(
     name="varannote",
-    version="1.0.7",
+    version="1.0.8",
     author="Ata Umut ÖZSOY",
     author_email="ataumut7@gmail.com",
     description="Comprehensive Variant Analysis & Annotation Suite",
